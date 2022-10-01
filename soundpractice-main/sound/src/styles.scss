@@ -1,0 +1,60 @@
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+$md-mcgpalette0: (
+    50 : #ffe8e2,
+    100 : #ffc5b6,
+    200 : #ff9e86,
+    300 : #ff7756,
+    400 : #ff5a31,
+    500 : #ff3d0d,
+    600 : #ff370b,
+    700 : #ff2f09,
+    800 : #ff2707,
+    900 : #ff1a03,
+    A100 : #ffffff,
+    A200 : #fff3f2,
+    A400 : #ffc3bf,
+    A700 : #ffaba6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-app-primary: mat-palette($md-mcgpalette0);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+body{
+  min-height: 100vh;
+  padding:0%;
+  margin: 0;
+}
+
+html, body { height: 100%; scroll-behavior: smooth; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

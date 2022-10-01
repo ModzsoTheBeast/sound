@@ -1,0 +1,23 @@
+<div class="title">
+  {{musicTitle}}
+</div>
+<div class="audio-container">
+  <audio preload="metadata"  #musicplayer>
+     </audio>
+     <mat-slider
+      [(ngModel)]="value"
+      (change)="setMusicCurrentTime(value)"
+        min="0"
+        [max]="maxTime"
+        aria-label="units"
+        color="primary"
+        >
+      </mat-slider>
+
+</div>
+
+<div class="button-container">
+  <button mat-raised-button color="primary" (click)="setAudio(-1)"><mat-icon>skip_previous</mat-icon></button>
+  <button mat-raised-button color="primary" (click)="setplayButtonState()"> <mat-icon> {{playState}}</mat-icon></button>
+  <button mat-raised-button color="primary" (click)="setAudio(1)"><mat-icon>skip_next</mat-icon></button>
+</div>

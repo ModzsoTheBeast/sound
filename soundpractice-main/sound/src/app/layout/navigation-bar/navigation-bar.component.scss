@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+.bottomNavbar{
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  color: #ff3d0d;
+  bottom: 0;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bottomNavbar-mobile{
+  position: fixed;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  color: #ff3d0d;
+  bottom: 0;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.bottomNavbar a{
+  margin-inline: 1%;
+  margin-bottom:1rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.bottomNavbar a:hover{
+  color: #ff3d0d;
+}
+
+.bottomNavbar-mobile a{
+  margin-inline: 1%;
+  margin-bottom:1rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.bottomNavbar-mobile a:hover{
+  color: #ff3d0d;
+}
+
+.topNavbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ff3d0d;
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  top: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  margin-right: 4rem;
+}
+.spacer{
+  flex: 1 1 auto;
+}
+
+.topNavbar .actual {
+  color: #ff3d0d;
+  margin-left: 6rem;
+}
+
+.topNavbar a{
+  margin-inline: 1%;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.topNavbar a:hover{
+  color: #ff3d0d;
+}
+
+.topNavbar span{
+  display: inline-flex;
+  margin-right: 5rem;
+}

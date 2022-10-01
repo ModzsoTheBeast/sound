@@ -1,0 +1,16 @@
+<div *ngIf="scrolledTop; else scrolledDown">
+  <nav
+  (scroll)="onWindowScroll($event)"
+  [ngClass]="{'bottomNavbar-mobile': isMobile, 'bottomNavbar': !isMobile}">
+  <a href="#contact">Elérhetőségek</a> | <a href="#aboutme">Rólam</a> | <a href="#gallery"> Galéria </a>
+  </nav>
+</div>
+
+<ng-template #scrolledDown>
+  <nav
+  (scroll)="onWindowScroll($event)"
+  class="topNavbar">
+    <a href="#{{menuTitles[0].path}}" class="actual">{{menuTitles[0].title}}</a> <span class="spacer"></span>
+    <span><a href="#{{menuTitles[1].path}}">{{menuTitles[1].title}}</a> | <a href="#{{menuTitles[2].path}}">{{menuTitles[2].title}}</a></span>
+  </nav>
+</ng-template>
